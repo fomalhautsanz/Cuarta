@@ -1,61 +1,62 @@
 # 📈 Cuarta — Stock Investment Simulator
 
-> A virtual stock market simulator built with **Python, Django, and MySQL** to explore how investors, brokers, companies, and stock markets interact.
+> A virtual stock market simulator that models how investors, brokers, companies, and a stock exchange interact within a simulated financial market.
 
-Cuarta is an educational stock investment simulator designed to recreate the basic experience of participating in a stock market without using real money.
+## 📌 System Overview
 
-Users receive virtual funds that they can use to buy and sell simulated company shares, manage their portfolio, monitor transactions, and observe how changes in stock prices affect their investments.
+**Cuarta** is an educational stock investment simulator designed to recreate the basic processes involved in participating in a stock market without using real money.
 
-The project is primarily intended as a **learning project for programming, databases, investing concepts, and financial systems**.
+The system provides users with **virtual funds** that they can use to purchase and sell shares of simulated companies. Users can monitor their investments, manage their portfolios, review transaction records, and observe how changes in stock prices affect the value of their holdings.
 
----
-
-## 🎯 Project Goals
-
-Cuarta aims to help me understand both the **technical** and **financial** concepts behind stock investing.
-
-### Programming Goals
-
-- Practice Python and Django
-- Build a database-driven web application
-- Learn Django models, views, URLs, and templates
-- Practice CRUD operations
-- Implement authentication and authorization
-- Learn database transactions
-- Practice frontend and backend integration
-- Build a simulated trading system
-- Implement financial calculations
-- Improve Git and GitHub workflow
-
-### Financial Learning Goals
-
-- Understand how stocks work
-- Understand buying and selling shares
-- Learn how portfolios are managed
-- Understand market prices
-- Learn about brokers and trading orders
-- Understand profit and loss
-- Explore how supply and demand can affect prices
-- Experiment with investment strategies without risking real money
+The simulator models the interaction between **investors, brokers, companies, and the stock exchange**, creating a simplified representation of a functioning stock market.
 
 ---
 
-## 🏦 How the Simulator Works
+## 🛠️ Tech Stack
 
-The basic system models several participants in a simplified stock market:
+| Technology | Purpose |
+|---|---|
+| **Python** | Core programming language and business logic |
+| **Django** | Web framework and backend |
+| **MySQL** | Relational database for storing system data |
+| **HTML** | Web page structure |
+| **CSS** | User interface styling |
+| **JavaScript** | Client-side interactions and dynamic features |
+| **Pandas** | Financial and market data processing |
+| **Matplotlib** | Stock price and portfolio data visualization |
+| **Git** | Version control |
+| **GitHub** | Source code hosting and collaboration |
+
+### Architecture
 
 ```text
-                    STOCK MARKET
-                         │
-          ┌──────────────┼──────────────┐
-          ↓              ↓              ↓
-      COMPANIES       BROKERS       INVESTORS
-          │              │              │
-     Issue Shares    Execute Orders   Buy / Sell
-          │              │              │
-          └──────────────┼──────────────┘
-                         ↓
-                  STOCK EXCHANGE
-                         │
-                         ↓
-                    MARKET PRICE
+┌─────────────────────────────────────────────┐
+│                  FRONTEND                   │
+│          HTML • CSS • JavaScript            │
+└──────────────────────┬──────────────────────┘
+                       │
+                       ↓
+┌─────────────────────────────────────────────┐
+│                   DJANGO                    │
+│                                             │
+│  Authentication • Trading • Portfolio      │
+│  Market Logic • Orders • Transactions       │
+└──────────────────────┬──────────────────────┘
+                       │
+             ┌─────────┴─────────┐
+             ↓                   ↓
+┌────────────────────┐  ┌────────────────────┐
+│       MySQL        │  │      Pandas        │
+│                    │  │                    │
+│ Users              │  │ Market Data        │
+│ Companies          │  │ Calculations       │
+│ Holdings           │  │ Analysis            │
+│ Orders             │  │                    │
+│ Transactions       │  └────────────────────┘
+└────────────────────┘
+             │
+             ↓
+┌─────────────────────────────────────────────┐
+│                 Matplotlib                  │
+│        Charts • Price History • P/L         │
+└─────────────────────────────────────────────┘
