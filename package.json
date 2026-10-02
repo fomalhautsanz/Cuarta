@@ -1,0 +1,27 @@
+{
+  "name": "cuarta",
+  "version": "1.0.0",
+  "description": "A web-based **personal financial management system** built with **Python, Django, and MySQL**. The system helps users plan, track, and analyze their finances using the **50/30/20 budgeting rule**, while providing tools for expense tracking, savings goals, budgeting, and financial analytics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:css": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fomalhautsanz/Cuarta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fomalhautsanz/Cuarta/issues"
+  },
+  "homepage": "https://github.com/fomalhautsanz/Cuarta#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
+
